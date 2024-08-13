@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root {
+
+  --font-family: 'DM Sans';
+
+  --wa-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --wa-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --wa-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --wa-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --wa-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --wa-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --wa-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+
+  --base-unit: 0.5rem;
+  --space-base-unit: var(--base-unit);
+  /* Margin, Padding - 8x8 grid */
+  --space-4: calc(var(--space-base-unit) * 0.5);
+  --space-8: calc(var(--space-base-unit) * 1);
+  --space-16: calc(var(--space-base-unit) * 2);
+  --space-24: calc(var(--space-base-unit) * 3);
+  --space-32: calc(var(--space-base-unit) * 4);
+  --space-40: calc(var(--space-base-unit) * 5);
+  --space-48: calc(var(--space-base-unit) * 6);
+  --space-64: calc(var(--space-base-unit) * 8);
+
+  --line-height-base-unit: 1;
+  --line-height-small: calc(var(--line-height-base-unit) * 1.2);
+  --line-height-medium: calc(var(--line-height-base-unit) * 1.4);
+  --line-height-large: calc(var(--line-height-base-unit) * 1.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  /* overrides height  */
+  min-height: 100vh;
+  /* workaround */
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+  text-size-adjust: 100%;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+body {
+  font-size: var(--wa-base);
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  line-height: var(--line-height-small);
+
+  container-type: inline-size;
+
+}
+
+
+ul,
+ol,
+li {
+  list-style: none;
+}

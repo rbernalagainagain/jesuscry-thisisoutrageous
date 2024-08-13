@@ -41,6 +41,9 @@ importers:
       express:
         specifier: ^4.18.2
         version: 4.19.2
+      modern-normalize:
+        specifier: ^3.0.0
+        version: 3.0.0
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -2992,6 +2995,10 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  modern-normalize@3.0.0:
+    resolution: {integrity: sha512-oY2uocgMUQC33i5rKZMWzhyJ+U2nsoiHDYyoDVFxYVBob8RIjZoCbRSbE4+a2/SfbGmZOhOJIavLrzz3BC72tw==}
+    engines: {node: '>=6'}
 
   mrmime@2.0.0:
     resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
@@ -7450,6 +7457,8 @@ snapshots:
       minimist: 1.2.8
 
   mkdirp@1.0.4: {}
+
+  modern-normalize@3.0.0: {}
 
   mrmime@2.0.0: {}
 
