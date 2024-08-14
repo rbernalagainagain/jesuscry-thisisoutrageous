@@ -14,7 +14,15 @@ export const WINDOW = new InjectionToken<Window & typeof globalThis | null>('Win
   }
 })
 
-export const LOCAL_STORAGE = new InjectionToken<Storage>('Local Storage', {
+export const LOCAL_STORAGE = new InjectionToken<Storage | null>('Local Storage', {
   providedIn: 'root',
-  factory: ():Storage => localStorage
+  factory: ():Storage | null => {
+    const platformId = inject(PLATFORM_ID);
+    if(isPlatformBrowser(platformId)){
+      return localStorage
+    }
+    return null;
+  }
 })
+
+

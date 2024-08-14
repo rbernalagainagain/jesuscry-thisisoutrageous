@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent{
+export class AppComponent {
   title = 'weather-web';
 
 }

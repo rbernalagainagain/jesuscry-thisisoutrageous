@@ -72,6 +72,9 @@ importers:
       '@types/node':
         specifier: ^18.18.0
         version: 18.19.44
+      '@types/serviceworker':
+        specifier: ^0.0.92
+        version: 0.0.92
       jasmine-core:
         specifier: ~5.1.0
         version: 5.1.2
@@ -90,6 +93,9 @@ importers:
       karma-jasmine-html-reporter:
         specifier: ~2.1.0
         version: 2.1.0(jasmine-core@5.1.2)(karma-jasmine@5.1.0(karma@6.4.4))(karma@6.4.4)
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
       typescript:
         specifier: ~5.5.2
         version: 5.5.4
@@ -1535,6 +1541,9 @@ packages:
 
   '@types/serve-static@1.15.7':
     resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
+
+  '@types/serviceworker@0.0.92':
+    resolution: {integrity: sha512-yGa9gew+3Z01a4EIQ4h8v5a6+x1szK3mYWTaIrsiH6jQXAusDnzT0kFtWx4d9jzBj0e5dsmWvIaFuJtSaukzdg==}
 
   '@types/sockjs@0.3.36':
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
@@ -3323,6 +3332,11 @@ packages:
   postcss@8.4.38:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
+
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   proc-log@4.2.0:
     resolution: {integrity: sha512-g8+OnU/L2v+wyiVK+D5fA34J7EH8jZ8DDlvwhRCMxmMj7UCBvxiO1mGeN+36JXIKF4zevU4kRBd8lVgG9vLelA==}
@@ -5868,6 +5882,8 @@ snapshots:
       '@types/node': 18.19.44
       '@types/send': 0.17.4
 
+  '@types/serviceworker@0.0.92': {}
+
   '@types/sockjs@0.3.36':
     dependencies:
       '@types/node': 18.19.44
@@ -7806,6 +7822,8 @@ snapshots:
       nanoid: 3.3.7
       picocolors: 1.0.1
       source-map-js: 1.2.0
+
+  prettier@3.3.3: {}
 
   proc-log@4.2.0: {}
 

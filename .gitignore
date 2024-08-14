@@ -2,6 +2,8 @@
 
 # Compiled output
 /dist
+/src/sw.js
+/src/sw.js.map
 /tmp
 /out-tsc
 /bazel-out
