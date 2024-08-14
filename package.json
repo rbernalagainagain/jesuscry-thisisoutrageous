@@ -40,6 +40,8 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "@types/serviceworker": "^0.0.92",
+    "angular-eslint": "18.3.0",
+    "eslint": "^9.9.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -47,6 +49,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.3.3",
-    "typescript": "~5.5.2"
+    "typescript": "~5.5.2",
+    "typescript-eslint": "8.1.0"
+  },
+  "volta": {
+    "node": "20.16.0"
   }
 }

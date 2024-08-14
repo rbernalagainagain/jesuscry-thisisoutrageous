@@ -1,9 +1,9 @@
-// @ts-ignore
+// @ts-expect-error: ServiceWorker can only reference by "self"
 declare const self: ServiceWorkerGlobalScope
 
 self.addEventListener('install', function () {
   self.skipWaiting()
-  console.debug('Service worker has been installed')
+  console.debug('Service worker has been installed, again')
 })
 
 self.addEventListener('activate', function (event: ExtendableEvent) {
