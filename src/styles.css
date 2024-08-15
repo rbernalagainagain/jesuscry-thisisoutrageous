@@ -1,10 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-@import '../node_modules/modern-normalize/modern-normalize.css';
+/* Added modern-normalize.css by angular.json*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-
 :root {
-
   --font-family: 'DM Sans';
 
   --wa-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
@@ -31,6 +28,11 @@
   --line-height-small: calc(var(--line-height-base-unit) * 1.2);
   --line-height-medium: calc(var(--line-height-base-unit) * 1.4);
   --line-height-large: calc(var(--line-height-base-unit) * 1.5);
+
+  --xl-screen: 80rem;
+  --lg-screen: 64rem;
+  --md-screen: 48rem;
+  --sm-screen: 40rem;
 }
 
 * {
@@ -38,7 +40,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   /* overrides height  */
   min-height: 100vh;
   /* workaround */
@@ -58,8 +61,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-
-
 body {
   font-size: var(--wa-base);
   font-family: var(--font-family), sans-serif;
@@ -67,9 +68,12 @@ body {
   line-height: var(--line-height-small);
 
   container-type: inline-size;
+  width: var(--xl-screen);
+  margin: 0 auto;
 
+  /* remove border in production */
+  border: 1px solid white;
 }
-
 
 ul,
 ol,
