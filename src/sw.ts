@@ -3,7 +3,7 @@ declare const self: ServiceWorkerGlobalScope
 
 self.addEventListener('install', function () {
   self.skipWaiting()
-  console.debug('Service worker has been installed, again')
+  console.debug('Service worker has been installed.')
 })
 
 self.addEventListener('activate', function (event: ExtendableEvent) {
