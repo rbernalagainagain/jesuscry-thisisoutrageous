@@ -3,7 +3,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./src",
+    "outDir": "./src"
   },
-  "files": ["src/sw.ts" ],
+  "files": ["src/sw.ts"]
 }
