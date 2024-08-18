@@ -1,5 +1,5 @@
 {
-  "name": "weather-web",
+  "name": "jesuscry-thisisoutrageous",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,7 +12,7 @@
     "tsc:sw:watch": "pnpm tsc:sw -w",
     "lint": "ng lint",
     "format": "prettier --write .",
-    "serve:ssr": "node dist/weather-web/server/server.mjs",
+    "serve:ssr": "node dist/jesuscry-thisisoutrageous/server/server.mjs",
     "watch:sw": "pnpm tsc:sw:watch & pnpm watch"
   },
   "private": true,

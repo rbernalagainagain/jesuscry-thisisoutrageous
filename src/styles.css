@@ -33,6 +33,11 @@
   --lg-screen: 64rem;
   --md-screen: 48rem;
   --sm-screen: 40rem;
+
+  --background-color: #e8f9f9;
+  --primary-color: #e6ebf4;
+  --secondary-color: #ffd89e;
+  --text-color: #333333;
 }
 
 * {
@@ -59,6 +64,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  background-color: var(--background-color);
 }
 
 body {
@@ -66,6 +73,7 @@ body {
   font-family: var(--font-family), sans-serif;
   font-weight: 400;
   line-height: var(--line-height-small);
+  color: var(--text-color);
 
   container-type: inline-size;
   width: var(--xl-screen);

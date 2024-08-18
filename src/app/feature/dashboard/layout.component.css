@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.dashboard-layout {
+  display: grid;
+  height: 100%;
+  background-color: #ffffff;
+
+  grid-template-columns: 1fr minmax(25%, max-content);
+}
+
+.dashboard-layout > * {
+  padding: var(--space-48) var(--space-32);
+}
+
+.dashboard-layout > * + * {
+  position: relative;
+}
+
+.dashboard-layout > * + *::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.main-content {
+  display: grid;
+}
+
+.main-content__inner {
+  border: 1px solid green;
+}
+
+.forecast-content {
+  display: grid;
+}
+
+.forecast-content__inner {
+  border: 1px solid green;
+}

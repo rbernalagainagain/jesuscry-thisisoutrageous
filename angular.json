@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "weather-web": {
+    "jesuscry-thisisoutrageous": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -22,7 +22,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/weather-web",
+            "outputPath": "dist/jesuscry-thisisoutrageous",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [],
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "weather-web:build:production"
+              "buildTarget": "jesuscry-thisisoutrageous:build:production"
             },
             "development": {
-              "buildTarget": "weather-web:build:development"
+              "buildTarget": "jesuscry-thisisoutrageous:build:development"
             }
           },
           "defaultConfiguration": "development"
