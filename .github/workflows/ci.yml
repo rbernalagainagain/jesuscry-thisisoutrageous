@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: CI
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest # If you are using Nginx server
 
     steps:
