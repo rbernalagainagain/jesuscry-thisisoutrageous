@@ -1,0 +1,39 @@
+name: Deploy
+env:
+#  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+#  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on: [workflow_dispatch]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build Angular app
+        run: pnpm build
+
+      - name: Deploy to Netlify
+        id: netlify_deploy
+        run: |
+          pnpm --package=netlify-cli dlx netlify deploy \
+            --dir dist \
+            --site ${{ secrets.NETLIFY_SITE_ID }} \
+            --auth ${{ secrets.NETLIFY_API_TOKEN }}

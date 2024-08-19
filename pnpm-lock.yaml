@@ -56,7 +56,7 @@ importers:
     devDependencies:
       '@analogjs/platform':
         specifier: ^1.7.1
-        version: 1.7.1(kwbeukcfxi7ogz3334l5wmglx4)
+        version: 1.7.1(nlqkveoxiakdsvxfk2apl7nn4m)
       '@analogjs/vite-plugin-angular':
         specifier: ^1.5.0
         version: 1.7.1(upphb7rjsgzjrglodczygq5xh4)
@@ -7402,12 +7402,12 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@analogjs/platform@1.7.1(kwbeukcfxi7ogz3334l5wmglx4)':
+  '@analogjs/platform@1.7.1(nlqkveoxiakdsvxfk2apl7nn4m)':
     dependencies:
       '@analogjs/vite-plugin-angular': 1.7.1(upphb7rjsgzjrglodczygq5xh4)
       '@analogjs/vite-plugin-nitro': 1.7.1(encoding@0.1.13)
       '@nx/angular': 19.6.0(6pazj3dyjhsliejfi4r3skqbha)
-      '@nx/devkit': 19.1.2(nx@19.1.2)
+      '@nx/devkit': 19.6.0(nx@19.1.2)
       '@nx/vite': 19.1.2(@babel/traverse@7.25.3)(@types/node@18.19.45)(nx@19.1.2)(typescript@5.5.4)(vite@5.4.0(@types/node@18.19.45)(less@4.2.0)(sass@1.77.8)(stylus@0.59.0)(terser@5.31.6))(vitest@1.6.0(@types/node@18.19.45)(jsdom@22.1.0)(less@4.2.0)(sass@1.77.8)(stylus@0.59.0)(terser@5.31.6))
       marked: 14.0.0
       marked-gfm-heading-id: 3.2.0(marked@14.0.0)
