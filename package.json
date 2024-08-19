@@ -15,6 +15,7 @@
     "serve:ssr": "node dist/server/server.mjs",
     "watch:sw": "pnpm tsc:sw:watch & pnpm watch"
   },
+  "packageManager": "pnpm@9.4.0",
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.1.0",
