@@ -1,5 +1,5 @@
 // @ts-expect-error: ServiceWorker can only reference by "self"
-declare const self: ServiceWorkerGlobalScope
+declare let self: ServiceWorkerGlobalScope
 
 self.addEventListener('install', function () {
   self.skipWaiting()
