@@ -33,6 +33,6 @@ jobs:
         id: netlify_deploy
         run: |
           pnpm --package=netlify-cli dlx netlify deploy \
-            --dir dist \
+            --dir dist/browser \
             --site ${{ env.NETLIFY_SITE_ID }} \
             --auth ${{ env.NETLIFY_API_TOKEN }}
