@@ -12,4 +12,6 @@ jobs:
       - name: build image
         run: docker build . -t rbernalber/calmayourdrama.projects:latest
       - name: push image to docker hub
-        run: docker push rbernalber/calmayourdrama.projects:latest
+        run: |
+          docker login -u rbernalber -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push rbernalber/calmayourdrama.projects:latest
