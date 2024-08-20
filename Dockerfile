@@ -1,4 +1,4 @@
-FROM node:lts AS base
+FROM node:alpine3.19 AS base
 
 FROM base AS build
 RUN corepack enable
@@ -9,12 +9,19 @@ RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store pnpm install
 COPY . .
 RUN pnpm build
 
+FROM base AS final
 
-FROM nginx:latest
+WORKDIR /app
+COPY --from=build /app/dist /app/dist
+ENV NODE_ENV=production
+CMD ["node", "./dist/server/server.mjs"]
+EXPOSE 4000
 
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist/browser /usr/share/nginx/html
-
-EXPOSE 80
+#FROM nginx:latest
+#
+#COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+#COPY --from=build /app/dist /usr/share/nginx/html
+#
+#EXPOSE 80
 
 
