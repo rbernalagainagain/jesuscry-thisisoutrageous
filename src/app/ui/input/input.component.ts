@@ -1,7 +1,6 @@
-import { afterNextRender, Directive, ElementRef, Input, Optional, PLATFORM_ID, Self } from '@angular/core'
+import { afterNextRender, Directive, ElementRef, Input, Optional, Self } from '@angular/core'
 import { FormFieldControl } from '../form-field/form-field-control'
 import { NgControl, Validators } from '@angular/forms'
-import { isPlatformBrowser } from '@angular/common'
 import { HTMLInputTypeAttribute } from '../form-field/input-type-attribute'
 
 let nextUniqueId = 0
@@ -17,7 +16,6 @@ export type BooleanInput = string | boolean | null | undefined
   exportAs: 'duInput',
   host: {
     class: 'app-input-element',
-    '[id]': 'id',
     '[disabled]': 'disabled',
     '[required]': 'required',
     '[attr.name]': 'name || null',
@@ -58,7 +56,7 @@ export class InputComponent implements FormFieldControl<unknown> {
   }
   protected _required: boolean | undefined
 
-  @Input({ transform: coerceBooleanProperty }) disabled: boolean = false
+  @Input({ transform: coerceBooleanProperty }) disabled = false
 
   @Input()
   get value(): string {
@@ -85,5 +83,10 @@ export class InputComponent implements FormFieldControl<unknown> {
         this.ngControl.control?.valueChanges.subscribe(console.log)
       }
     })
+    this.forceSetterId(this.id)
+  }
+
+  private forceSetterId(id: string) {
+    this.id = id
   }
 }

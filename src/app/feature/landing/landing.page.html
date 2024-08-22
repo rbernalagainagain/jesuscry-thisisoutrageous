@@ -12,6 +12,7 @@
       <h2 id="hidden-heading" class="visually-hidden">Accede a tu cuenta</h2>
       <form class="landing-hero__login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <app-form-field>
+          <app-label>Correo electrónico o número de teléfono</app-label>
           <input
             duInput
             type="text"
@@ -20,6 +21,7 @@
           />
         </app-form-field>
         <app-form-field>
+          <app-label>Password</app-label>
           <input duInput type="password" placeholder="Contraseña" formControlName="password" />
         </app-form-field>
         <button type="submit">Iniciar sesión</button>

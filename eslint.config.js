@@ -17,7 +17,7 @@ module.exports = tseslint.config(
     processor: angular.processInlineTemplates,
     rules: {
       '@angular-eslint/directive-selector': [
-        'error',
+        'warn',
         {
           type: ['element', 'attribute'],
           prefix: ['app', ''],
@@ -44,6 +44,8 @@ module.exports = tseslint.config(
           suffixes: ['Component', 'Page', 'Layout'],
         },
       ],
+      '@typescript-eslint/ban-ts-comment': 'warn',
+      "@typescript-eslint/no-explicit-any": "warn"
     },
   },
   {

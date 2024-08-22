@@ -1,8 +1,6 @@
 <div class="form-field">
-  <label>
-    <ng-content select="duLabel"></ng-content>
+  <label [attr.for]="_control.id">
+    <ng-content select="app-label"></ng-content>
   </label>
   <ng-content></ng-content>
 </div>
-
-<button class="form-field__submit">Buscar</button>

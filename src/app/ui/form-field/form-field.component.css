@@ -4,10 +4,6 @@
   border-radius: 4px;
 }
 
-.form-field__submit {
-  display: none;
-}
-
 :host(.ng-search) .form-field__submit {
   background-color: var(--background-color);
   display: inline-block;
