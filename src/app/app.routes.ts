@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router'
-import DashboardLayoutComponent from './feature/dashboard/layout.component'
+import LandingPage from './feature/landing/landing.page'
 
 export default [
   {
     path: '',
-    component: DashboardLayoutComponent,
+    component: LandingPage,
   },
   // {
   //   path: '',

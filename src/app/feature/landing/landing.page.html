@@ -1,0 +1,38 @@
+<main class="page-main">
+  <section class="landing-hero">
+    <div class="landing-hero__content">
+      <h1 class="landing-hero__title">DUENIAS</h1>
+      <div class="landing-hero__message">
+        <p>Facilita la conexión y el apoyo entre personas como tú.</p>
+      </div>
+    </div>
+  </section>
+  <section class="landing-hero__wrapper-login">
+    <div aria-labelledby="hidden-heading" role="form">
+      <h2 id="hidden-heading" class="visually-hidden">Accede a tu cuenta</h2>
+      <form class="landing-hero__login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <app-form-field>
+          <input
+            duInput
+            type="text"
+            placeholder="Correo electrónico o número de teléfono"
+            formControlName="emailOrTelephone"
+          />
+        </app-form-field>
+        <app-form-field>
+          <input duInput type="password" placeholder="Contraseña" formControlName="password" />
+        </app-form-field>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__content">
+    <div class="page-footer__copyright">
+      <div>
+        <span>calmayourdrama &copy;</span>
+      </div>
+    </div>
+  </div>
+</footer>
