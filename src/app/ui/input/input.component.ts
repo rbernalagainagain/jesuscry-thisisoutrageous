@@ -2,7 +2,6 @@ import { afterNextRender, Directive, DoCheck, ElementRef, Input, Optional, Self 
 import { FormFieldControl } from '../form-field/form-field-control'
 import { NgControl, Validators } from '@angular/forms'
 import { HTMLInputTypeAttribute } from '../form-field/input-type-attribute'
-import * as console from 'node:console'
 
 let nextUniqueId = 0
 
