@@ -1,6 +1,8 @@
 <div class="form-field">
-  <label [attr.for]="_control.id">
-    <ng-content select="app-label"></ng-content>
-  </label>
+  @if (hasLabel()) {
+    <label class="form-field__label" [attr.for]="_control.id">
+      <ng-content select="app-label"></ng-content>
+    </label>
+  }
   <ng-content></ng-content>
 </div>

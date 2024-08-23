@@ -1,15 +1,28 @@
 :host {
-  display: inline-flex;
-  border: 2px solid var(--background-color);
-  border-radius: 4px;
+  display: block;
+  width: 100%;
 }
 
-:host(.ng-search) .form-field__submit {
-  background-color: var(--background-color);
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.form-field__label {
   display: inline-block;
-  border: none;
-  border-left: 2px solid var(--background-color);
-  padding: var(--space-8) var(--space-16);
-
-  color: var(--primary-color);
+  text-align: left;
+  font-size: var(--wa-sm);
+  font-weight: 600;
+  line-height: var(--line-height-small);
 }
+
+/*:host(.ng-search) .form-field__submit {*/
+/*  background-color: var(--background-color);*/
+/*  display: inline-block;*/
+/*  border: none;*/
+/*  border-left: 2px solid var(--background-color);*/
+/*  padding: var(--space-8) var(--space-16);*/
+
+/*  color: var(--primary-color);*/
+/*}*/

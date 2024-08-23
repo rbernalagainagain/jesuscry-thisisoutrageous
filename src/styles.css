@@ -102,48 +102,60 @@ li {
 }
 
 input {
-  font-size: inherit;
+  font-size: var(--wa-base);
+  line-height: var(--line-height-medium);
   background-color: transparent;
   color: inherit;
 }
 
-input.app-input-element {
-  font-size: var(--wa-base);
-  line-height: var(--line-height-medium);
+.app-input-element {
   padding: var(--space-8) var(--space-16);
   border-radius: var(--border-radius, 4px);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--secondary-text-color);
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-input.app-input-element::placeholder {
+.app-input-element::placeholder {
   color: var(--secondary-text-color);
 }
 
-input.app-input-element:focus {
+.app-input-element:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
-input.app-input-element:active {
+.app-input-element:active {
   border-color: var(--primary-color, #888888);
 }
 
-input.app-input-element[type='search']::-webkit-search-cancel-button,
-input.app-input-element[type='search']::-webkit-search-decoration,
-input.app-input-element[type='search']::-webkit-search-results-button,
-input.app-input-element[type='search']::-webkit-search-results-decoration {
+.app-input-element[type='search']::-webkit-search-cancel-button,
+.app-input-element[type='search']::-webkit-search-decoration,
+.app-input-element[type='search']::-webkit-search-results-button,
+.app-input-element[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-/*@media (hover: hover) {*/
-/*  input:hover {*/
-/*    background-color: deepskyblue;*/
-/*  }*/
-/*}*/
+.du-button-base {
+  display: inline-block;
+  padding: var(--space-8) var(--space-32);
+  border-radius: var(--border-radius, 4px);
+  border: 1px solid var(--secondary-text-color);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+.du-button-base:hover,
+.du-button-base:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 .visually-hidden {
   position: absolute;
   width: 1px;

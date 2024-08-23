@@ -1,7 +1,8 @@
-import { afterNextRender, Directive, ElementRef, Input, Optional, Self } from '@angular/core'
+import { afterNextRender, Directive, DoCheck, ElementRef, Input, Optional, Self } from '@angular/core'
 import { FormFieldControl } from '../form-field/form-field-control'
 import { NgControl, Validators } from '@angular/forms'
 import { HTMLInputTypeAttribute } from '../form-field/input-type-attribute'
+import * as console from 'node:console'
 
 let nextUniqueId = 0
 
@@ -12,7 +13,7 @@ export function coerceBooleanProperty(value: BooleanInput): boolean {
 export type BooleanInput = string | boolean | null | undefined
 
 @Directive({
-  selector: 'input[duInput]',
+  selector: 'input[duInput], textarea[duInput], select[duInput]',
   exportAs: 'duInput',
   host: {
     class: 'app-input-element',
@@ -21,14 +22,15 @@ export type BooleanInput = string | boolean | null | undefined
     '[attr.name]': 'name || null',
     '[attr.readonly]': 'readonly || null',
     '[attr.aria-required]': 'required',
-    '[attr.id]': 'id',
+    '[attr.id]': 'id ',
   },
   standalone: true,
   providers: [{ provide: FormFieldControl, useExisting: InputComponent }],
 })
-export class InputComponent implements FormFieldControl<unknown> {
+export class InputComponent implements FormFieldControl<unknown>, DoCheck {
   protected _uid = `sw-input-${nextUniqueId++}`
   private _inputValueAccessor: { value: any }
+  private readonly _isTextarea: boolean = false
 
   @Input()
   get id(): string {
@@ -43,7 +45,20 @@ export class InputComponent implements FormFieldControl<unknown> {
 
   @Input() placeholder: string
 
-  @Input() type: HTMLInputTypeAttribute = 'text'
+  @Input()
+  get type(): HTMLInputTypeAttribute {
+    return this._type
+  }
+
+  set type(value: HTMLInputTypeAttribute) {
+    this._type = value || 'text'
+
+    if (!this._isTextarea) {
+      ;(this._elementRef.nativeElement as HTMLInputElement).type = this._type
+    }
+  }
+
+  private _type: HTMLInputTypeAttribute = 'text'
 
   @Input({
     transform: coerceBooleanProperty,
@@ -83,7 +98,18 @@ export class InputComponent implements FormFieldControl<unknown> {
         this.ngControl.control?.valueChanges.subscribe(console.log)
       }
     })
+
+    const nodeName = this._elementRef.nativeElement.nodeName.toLowerCase()
+    this._isTextarea = nodeName === 'textarea'
+
     this.forceSetterId(this.id)
+  }
+
+  ngDoCheck() {
+    if (this.ngControl)
+      if (this.ngControl.disabled !== null && this.ngControl.disabled !== this.disabled) {
+        this.disabled = this.ngControl.disabled
+      }
   }
 
   private forceSetterId(id: string) {

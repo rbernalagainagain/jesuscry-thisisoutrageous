@@ -14,9 +14,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-items: center;
 }
 
 .landing-hero {
+  width: 450px;
   padding: var(--space-48) var(--space-32);
 }
 
@@ -43,7 +45,7 @@
     0 12px 48px rgba(0, 0, 0, 0.2);
   padding: var(--space-32);
   border-radius: var(--border-radius);
-  justify-self: center;
+  /*justify-self: center;*/
 }
 
 .landing-hero__login-form {

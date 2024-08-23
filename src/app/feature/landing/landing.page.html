@@ -1,9 +1,12 @@
 <main class="page-main">
   <section class="landing-hero">
     <div class="landing-hero__content">
-      <h1 class="landing-hero__title">DUENIAS</h1>
-      <div class="landing-hero__message">
-        <p>Facilita la conexión y el apoyo entre personas como tú.</p>
+      <div aria-labelledby="hidden-heading">
+        <h1 class="landing-hero__title visually-hidden">DUENIAS</h1>
+        <img src="duenia-logo.svg" alt="Logo de Duenias" class="landing-hero__logo" width="400" />
+        <div class="landing-hero__message">
+          <p>Facilita la conexión y el apoyo entre personas como tú.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -13,18 +16,19 @@
       <form class="landing-hero__login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <app-form-field>
           <app-label>Correo electrónico o número de teléfono</app-label>
-          <input
-            duInput
-            type="text"
-            placeholder="Correo electrónico o número de teléfono"
-            formControlName="emailOrTelephone"
-          />
+          <input duInput type="text" placeholder="duenia@correo.com o 666666666" formControlName="emailOrTelephone" />
         </app-form-field>
         <app-form-field>
-          <app-label>Password</app-label>
-          <input duInput type="password" placeholder="Contraseña" formControlName="password" />
+          <app-label>Contraseña</app-label>
+          <input
+            duInput
+            type="password"
+            placeholder="mínimo 8 caracteres
+"
+            formControlName="password"
+          />
         </app-form-field>
-        <button type="submit">Iniciar sesión</button>
+        <button duButton type="submit">Iniciar sesión</button>
       </form>
     </div>
   </section>
