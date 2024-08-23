@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms'
 import { FormFieldComponent } from '../../ui/form-field/form-field.component'
 import { InputComponent } from '../../ui/input/input.component'
 import { LabelComponent } from '../../ui/form-field/label.component'
-import { ButtonComponent } from "../../ui/button/button.component";
+import { ButtonComponent } from '../../ui/button/button.component'
 
 @Component({
   selector: 'app-landing-page',

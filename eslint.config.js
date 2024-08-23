@@ -45,7 +45,7 @@ module.exports = tseslint.config(
         },
       ],
       '@typescript-eslint/ban-ts-comment': 'warn',
-      "@typescript-eslint/no-explicit-any": "warn"
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
   {
